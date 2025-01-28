@@ -6,15 +6,14 @@ import burger from "../assets/burger.svg";
 const Header = () => {
   const [isOn, setIsOn] = useState(false);
  
-
   const toggleSwitch = () => {
     setIsOn(!isOn);
   };
+
   const getNavLinkClass = ({ isActive }) => {
     return isActive ? "text-blue-500 font-bold" : "text-gray-400";
   };
   
-
   return (
     <>
       <div className="header bg-white shadow-sm text-orange-400 p-4 flex justify-between  md:justify-around items-center font-medium">
@@ -34,13 +33,11 @@ const Header = () => {
           )}
         </div>
       </div>
-      <div
-        className={`md:hidden ${isOn ? "block" : "hidden"} bg-white shadow-sm text-orange-400 p-4`}
-      >
+      <div className={`md:hidden ${isOn ? "block" : "hidden"} bg-white shadow-sm text-orange-400 `} >
         <nav>
-          <NavLink className="block py-2 px-4" to={"/"}>Home</NavLink>
-          <NavLink className="block py-2 px-4" to={"/pages/PokemonDetailsPage"}>Pokemons</NavLink>
-          <NavLink className="block py-2 px-4" to={"/pages/SearchPage"}>Search</NavLink>
+          <NavLink className="block py-2 px-4" to={"/"}  onClick={toggleSwitch}>Home</NavLink>
+          <NavLink className="block py-2 px-4" to={"/pages/PokemonDetailsPage"}  onClick={toggleSwitch}>Pokemons</NavLink>
+          <NavLink className="block py-2 px-4" to={"/pages/SearchPage"} onClick={toggleSwitch}>Search</NavLink>
         </nav>
       </div>
     </>
