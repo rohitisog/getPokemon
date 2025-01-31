@@ -1,3 +1,8 @@
-# Get Your Pokemon
+# Get Your Pokemon with EVM Integration
 
-## Pages
+## Pickup your Pokemon 
+
+### Fetch POkemon
+### Fight with Pokemon 
+
+### winner get NFT or Token.
